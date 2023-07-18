@@ -5,6 +5,7 @@ import { Details } from "./pages/details/Details"
 import { PageNotFound } from "./pages/404/PageNotFound"
 import { Explore } from "./pages/explore/Explore"
 import { SearchResults } from "./pages/searchResult/SearchResults"
+import Header from "./components/header/Header"
 
 
 import {useState,useEffect} from "react"
@@ -39,6 +40,7 @@ function App() {
   }
   return (
    <BrowserRouter>
+   <Header/>
    <Routes>
     <Route path="/" element={<Home/>}/>
     <Route path="/:mediaType/:id" element={<Details/>}/>

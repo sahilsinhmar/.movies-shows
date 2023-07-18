@@ -49,9 +49,11 @@ export const HeroBanner = () => {
         <Img src={background}/>
       </div>}
 
+      <div className="opacity-layer"></div>
+
       <ContentWrapper>
         <div className="heroBannerContent">
-          <span className="title">Welcom</span>
+          <span className="title">Welcome</span>
           <span className="subtitle">Millions of movies, TV shows and people
            to discover. 
            Explore now</span>
