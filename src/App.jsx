@@ -13,6 +13,8 @@ import { fetchDataFromApi } from "./utils/api"
 import { useDispatch,useSelector } from "react-redux"
 import { BrowserRouter,Route,Routes } from "react-router-dom"
 import { getApiConfiguration,getGenres } from "./store/homeSlice"
+import Footer from "./components/footer/Footer"
+import useFetch from "./hooks/useFetch"
 
 function App() {
   const dispatch=useDispatch()
@@ -22,6 +24,7 @@ function App() {
 
   useEffect(()=>{
     fetchApiConfig();
+    genresCall();
   // eslint-disable-next-line react-hooks/exhaustive-deps
   },[])
 
@@ -38,6 +41,22 @@ function App() {
       console.log(error)
     }
   }
+
+  const genresCall=async()=>{
+    const genrestoring=[]
+    const endpoints=["movie","tv"]
+    const allGenres={}
+
+      endpoints.forEach((url)=>{
+        genrestoring.push(fetchDataFromApi(`/genre/${url}/list`))
+      })
+      const data= await Promise.all(genrestoring)
+      data.map(({genres})=>{
+        return genres.map((item)=>(allGenres[item.id]=item))
+      
+  })
+  dispatch(getGenres(allGenres))
+}
   return (
    <BrowserRouter>
    <Header/>
@@ -48,6 +67,7 @@ function App() {
     <Route path="/search/:query" element={<SearchResults/>}/>
     <Route path="*" element={<PageNotFound/>}/>
    </Routes>
+   <Footer/>
    </BrowserRouter>
   )
 }

@@ -4,21 +4,21 @@ import { fetchDataFromApi } from "../utils/api"
 
 const useFetch=(url)=>{
   const[data,setData]=useState(null)
-  const[loading, setLoading]=useState(false)
+  const[loading, setLoading]=useState(null)
   const[error, setError]=useState(null)
 
   useEffect(()=>{
     const fetchData=async ()=>{
-      setLoading(true)
+      setLoading("Loadingg")
       setData(null)
       setError(null)
 
       try {
         const response=await fetchDataFromApi(url);
-        setLoading(true)
+        setLoading(false)
         setData(response)
       } catch (error) {
-        setLoading(false);
+        setLoading(true);
         setError("Something went wrong");
       }
     }

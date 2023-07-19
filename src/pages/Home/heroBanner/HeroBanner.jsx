@@ -45,7 +45,7 @@ export const HeroBanner = () => {
 
   return (
     <div className='heroBanner'>
-      {loading && <div className="backdrop-img">
+      {!loading && <div className="backdrop-img">
         <Img src={background}/>
       </div>}
 
