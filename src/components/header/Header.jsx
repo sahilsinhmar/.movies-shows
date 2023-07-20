@@ -8,7 +8,7 @@ import { useNavigate, useLocation } from 'react-router-dom'
 import "./style.scss"
 
 import ContentWrapper from '../contentWrapper/ContentWrapper'
-import logo from "../../assets/movix-logo.svg"
+
 
 const Header = () => {
   const[query,setQuery]=useState('')
@@ -60,7 +60,7 @@ const Header = () => {
 
   // Handling the state of Navbar 
   const handleNavbar=()=>{
-    console.log(window.scrollY)
+    
     if(window.scrollY > 200){
       if(window.scrollY > lastScrollY && !mobileMenu){
         setShow("hide")
@@ -87,7 +87,7 @@ const Header = () => {
       <ContentWrapper>
         <div className="logo" onClick={()=>{navigate("/")
       setMobileMenu(false)}}>
-          <img src={logo} alt=''/>
+          <p className='logotext'>.movies/shows</p>
         </div>
         <ul className="menuItems">
           <li className="menuItem" onClick={()=>navigationHandler("movies")}  >Movies</li>

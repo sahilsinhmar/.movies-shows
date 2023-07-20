@@ -1,6 +1,6 @@
 @import "../../mixins.scss";
 .footer {
-    background-color: var(--black3);
+    background-color: hwb(240 10% 89%);
     padding: 50px 0;
     color: white;
     position: relative;
@@ -28,7 +28,7 @@
                 font-size: 16px;
             }
             &:hover {
-                color: var(--pink);
+                color: #0f1014;
             }
         }
     }
@@ -53,15 +53,15 @@
             width: 50px;
             height: 50px;
             border-radius: 50%;
-            background-color: var(--black);
+            background-color: #0f1014;
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
             transition: all ease 0.3s;
             &:hover {
-                box-shadow: 0 0 0.625em var(--pink);
-                color: var(--pink);
+                box-shadow: 0 0 0.625em #0f1014;
+                color: white;
             }
         }
     }

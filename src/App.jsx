@@ -2,9 +2,9 @@
 //importing pages
 import { Home } from "./pages/Home/Home"
 import { Details } from "./pages/details/Details"
-import { PageNotFound } from "./pages/404/PageNotFound"
-import { Explore } from "./pages/explore/Explore"
-import { SearchResults } from "./pages/searchResult/SearchResults"
+import  PageNotFound from "./pages/404/PageNotFound"
+import  Explore  from "./pages/explore/Explore"
+import  SearchResults  from "./pages/searchResult/SearchResults"
 import Header from "./components/header/Header"
 
 

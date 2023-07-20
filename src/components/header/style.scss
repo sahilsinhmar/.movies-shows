@@ -46,7 +46,8 @@
             align-items: center;
             margin: 0 15px;
             color: white;
-            font-weight: 500;
+            font-size: 1.4rem;
+            font-weight: 600;
             position: relative;
             &.searchIcon {
                 margin-right: 0;
@@ -75,20 +76,21 @@
     }
 
     &.mobileView {
-        background: var(--black3);
+        background: #0f1014;
         .menuItems {
             display: flex;
             position: absolute;
             top: 60px;
             left: 0;
-            background: var(--black3);
+            gap: 10px;
+            background: #0f1014;
             flex-direction: column;
             width: 100%;
             padding: 20px 0;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             animation: mobileMenu 0.3s ease forwards;
             .menuItem {
-                font-size: 20px;
+                font-size: 1.6rem;
                 width: 100%;
                 height: auto;
                 padding: 15px 20px;
@@ -152,4 +154,10 @@
 
 .searchMobileButton{
   cursor: pointer;
+}
+
+.logotext{
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: white;
 }
